@@ -31,6 +31,16 @@ public class QuestionService {
         System.out.println("Your answers are as: ");
         for (String s : ans) System.out.println(s);
     }
+    public void printScore(){
+        int score=0;
+        for(int i=0;i<questions.length;i++){
+            Question que=questions[i];
+            String ActualAns=que.getAnswer();
+            String userAns=ans[i];
+            if(ActualAns.equals(userAns)) score++;
+        }
+        System.out.println("Your score is: "+score);
+    }
 
     public static void main(String[] args) {
 
